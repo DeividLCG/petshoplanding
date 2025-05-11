@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sora:wght@100..800&display=swap');
+* {margin: 0px; padding: 0px; overflow-x: hidden ; scroll-behavior: smooth; }
+body {background-color: #26534f;}
+
+#menu {position:fixed; z-index: 1; ;background-color: antiquewhite;width: 100vw; height: 50px;display: flex; justify-content: center; 
+align-items: center; transition: 0.4s ease-in-out; border-bottom: 2px solid black;}
+#menu:hover {background-color: bisque;}
+    #examsbtn {display: none;}
+.menu_link {padding: 15px; text-decoration: none; font-family: 'Nunito'; color: rgb(0, 0, 0); font-size: 19px; transition:  0.3s ease-in-out; }
+.menu_link:hover { font-size: 22px;}
+#menu p {cursor: pointer;}
+#menu img {width: 60px; height: 60px;}
+
+#main {pointer-events: none;display: flex; flex-direction: row; align-items: center; justify-content: center;}
+#main_text {color: white; width: 30vw;}
+#main_text h2 {font-family: 'sora';}
+#main_text p {font-family: 'nunito';}
+
+#agendamento {font-family: 'sora'; color: rgb(0, 0, 0); cursor: pointer; width: 20vw; background-color: antiquewhite;
+text-align: center; border-radius: 25px; height: 70px; display: flex ; align-items: center; justify-content: center; margin: auto;
+transition: 0.4s ease-in-out; font-size: 18px;} 
+#agendamento:hover {transform: scale(1.1); background-color: bisque;}
+
+#cards {display: flex; flex-direction: row; height: 300px; justify-content: center;}
+.exam_card {width: 200px; height: 200px; padding: 15px; background-color:antiquewhite; margin-left: 10px;
+border-radius: 15px; margin-top: 35px; transition: 0.4s ease-in-out; }
+.exam_card:hover {transform: scale(1.05); background-color: bisque;}
+.exam_card h3 {font-family: 'sora';}
+.exam_card p {font-family: 'nunito'; margin-top: 15px; }
+
+#equipe { display: flex; justify-content: space-evenly;
+}
+.doc_card img {width: 250px; height: 450px; border-radius: 15px;}
+.doc_card { margin-top: 35px; overflow: hidden;font-family: 'nunito';width: 600px; height: 450px;
+ color: white;}
+.doc_text {float: right; width: 50%;}
+
+footer { display: flex;flex-direction: row; justify-content: space-evenly;font-family: 'nunito' ;width: 100vw; height: 300px; background-color: #3d8079; color: white;}
+
+.ftdiv {width: 25%; padding: 30px}
+#redes img {width: 50px; margin-left: 10px; padding: 10px; transition: 0.4s ease-in-out; cursor: pointer;}
+#redes img:hover {transform: scale(1.1);}
+#aviso {margin-top: 10px;}
+
+
+
+/* VERSÃO PRA CELULAR */
+
+
+@media screen and (max-width: 768px) {
+
+    /* Menu */
+    #menu { 
+        font-size: 15px;
+        height: 30px;
+        border-bottom: none;
+        padding: 10px 
+    }
+    .menu_link {
+        font-size: 18px;
+        margin: 5px 0;
+        padding: 10px;
+    }
+
+    #examsbtn {display: block;}
+
+    /* Main Section */
+    #main { 
+        margin-top: 15px;
+        flex-direction: column; 
+        pointer-events: auto; 
+        padding: 20px;
+    }
+    #main_text {
+        width: 90vw;
+        text-align: center;
+    }
+    #main_text h2 {
+        font-size: 24px;
+    }
+    #main_text p {
+        font-size: 16px;
+    }
+    #main img {
+        width: 90vw;
+        margin-bottom: 20px;
+    }
+
+    /* Agendamento Button */
+    #agendamento {
+        width: 90vw;
+        height: auto;
+        margin: 20px auto;
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    /* Exam Cards */
+    #cards {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .exam_card {
+        width: 90vw;
+        margin: 15px 0;
+        height: auto;
+    }
+
+    /* Equipe Section */
+    #equipe {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .doc_card {
+        width: 90vw;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .doc_card img {
+        width: 90vw;
+        height: auto;
+        margin-bottom: 15px;
+    }
+    .doc_text {
+        width: 90%;
+        float: none;
+        text-align: center;
+    }
+
+    /* Footer */
+   footer {
+        flex-direction: column;
+        align-items: center;
+        overflow: visible;
+        height: auto;
+        
+        
+    }
+    .ftdiv {
+        padding: 20px;
+        width: 90%;
+        margin-bottom: 20px;
+        overflow: visible; /* Garante que o texto não fique cortado */
+    }
+    #redes img {
+        width: 40px;
+        margin: 5px;
+    }
+}
